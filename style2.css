@@ -1,0 +1,2288 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Kaisei+Decol:wght@400;500;700&family=Kaisei+HarunoUmi:wght@400;500;700&family=M+PLUS+1:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*СКИДАННЯ*/
+*{
+	padding:0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+a{
+	text-decoration: none;
+}
+
+ul,ol,li{
+	list-style: none;
+}
+
+img{
+	vertical-align: top;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+html,body{
+	height: 100%;
+	line-height: 1;
+	color: #000;
+	font-weight:200;
+	font-family:Montserrat;
+	background-color: #ffffff
+}
+/*-------------------------------------------------------------------------------------*/
+.wrapper{
+	min-height: 100%;
+	overflow: hidden;
+}
+/*-------ОБМЕЖУЮЧИЙ КОНТЕЙНЕР---------------------------------------------------------------------------*/
+._container{
+	/*border: 1px solid #0000ff;*/
+	border: 1px solid rgba(0, 0, 255, 0.0);
+	max-width: 1300px;
+	padding: 0px 10px;
+	margin: 0px auto;	
+	box-sizing: content-box;
+
+}
+
+/*---------СПІЛЬНІ БЛОКИ--------------------------------------------------------------------------------------------------------------*/
+.color_background{
+	background-color: rgba(228, 223, 223, 0.95);
+}
+
+
+/*-------ШАПКА-------------------------------------------------------------------------------------------------------*/
+.header{
+	/*border: 1px solid #000;*/
+	height: 100vh;
+	background-image: url("img/font.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center right;
+}
+.burger_menu{
+	/*border: 3px solid #ff0000;*/
+	background-color: rgba(228, 223, 223, 0.95);
+	margin:0px 0px 0px 0px;
+	
+}
+.header__container{
+	/*border: 1px solid #0000ff;*/
+	display: flex;
+	min-height: 100px;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.logo{
+	/*border: 1px solid #000;*/
+}
+.menu{
+	/*border: 1px solid #000;*/
+	/*margin: 0px 0px 0px 53px;*/
+	padding: 5px 0px;
+}
+.menu_ul{
+	display: flex;
+	flex-wrap: wrap;
+	
+}
+.menu_li{
+
+}
+.menu_li:not(:last-child){
+	margin: 0px 37px 0px 0px;
+}
+.menu_link{
+	font-weight: 300;
+	font-size: 22px;
+	color: inherit;
+	line-height: 37px;
+}
+.menu_icon{
+	display: flex;
+	flex-wrap: wrap;
+	/*border: 1px solid #000;*/
+	padding: 5px 0px;
+}
+.icon{
+	line-height: 45px;
+}
+.icon:not(:last-child){
+	margin: 0px 11px 0px 0px;
+}
+
+.b_menu{
+		display: block;
+		/*border: 1px solid #000;*/
+    	width: 320px;
+    	position: relative;
+    	color: #000;
+    	text-align: center;
+    	height: 40px;
+	}
+	#check-menu{
+		display: none;
+	}
+	label{
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		cursor: pointer;
+		z-index: 2;
+		line-height: 40px;
+
+	}
+	label,.label_text{
+		font-weight: 300;
+		font-size: 20px;
+	}
+	.burger-line{
+		position: absolute;
+		top: 8px;
+		right: 10px;
+		width: 35px;
+		height: 2px;
+		background-color: #000;
+		transition: 0.5s all;
+	}
+	.second, .third{
+		top:18px;
+	}
+	.fourth{
+		top: 28px;
+	}
+	.b_main_menu{
+		display: block;
+		position: absolute;
+		width: 100%;
+		bottom: 0px;
+		left: 0px;
+		transform: translateY(100%);
+		max-height: 0;
+		font-size: 0;
+		overflow: hidden;
+		transition: 0.5s all;
+	}
+	.b_menu_link{
+		display: block;
+		width: 100%;
+		padding:10px;
+		color: #000;	
+		text-decoration: none;
+		border-top: 1px solid rgba(0,0,0,0.3);
+		background-color: rgba(228, 223, 223, 0.95);
+		font-size: 18px;
+   	font-weight: 300; 
+	}
+
+	#check-menu:checked ~ .b_main_menu{
+		max-height: 500px;
+		font-size: 16px;
+	}
+	#check-menu:checked~ .first{
+		display: none;
+	}
+	#check-menu:checked~ .second{
+		transform: rotate(45deg);
+	}
+	#check-menu:checked~ .third{
+		transform: rotate(-45deg);
+	}
+	#check-menu:checked~ .fourth{
+		display: none;
+	}
+
+.b_menu{
+	display: none;
+}
+
+
+@media screen and (max-width: 1141px) {
+	.header__container{
+		min-height: 70px;
+	}
+	.logo{
+		display: none; 
+	}
+   .menu {
+      display: none; 
+   }
+   .menu_icon {
+      display: none; 
+   }
+   .b_menu {
+      display: block; 
+      width: 1200px; 
+   }
+
+}
+
+
+/*------------БУРГЕР------------------------------------------------------------------------*/
+	
+/*@media screen and (max-width: 470px) {
+	.logo{
+		display: none; 
+	}
+   .menu{
+      display: none; 
+    }
+   .menu_icon{
+    	display: none;
+    }  
+   .header__container{
+		min-height: 70px;
+	}
+	.b_menu{
+		display: block;
+		border: 1px solid #000;
+    	width: 320px;
+    	position: relative;
+    	color: #000;
+    	text-align: center;
+    	height: 40px;
+	}
+	#check-menu{
+		display: none;
+	}
+	label{
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		cursor: pointer;
+		z-index: 2;
+		line-height: 40px;
+
+	}
+	label,.label_text{
+		font-weight: 300;
+		font-size: 20px;
+	}
+	.burger-line{
+		position: absolute;
+		top: 8px;
+		right: 10px;
+		width: 35px;
+		height: 2px;
+		background-color: #000;
+		transition: 0.5s all;
+	}
+	.second, .third{
+		top:18px;
+	}
+	.fourth{
+		top: 28px;
+	}
+	.b_main_menu{
+		display: block;
+		position: absolute;
+		width: 100%;
+		bottom: 0px;
+		left: 0px;
+		transform: translateY(100%);
+		max-height: 0;
+		font-size: 0;
+		overflow: hidden;
+		transition: 0.5s all;
+	}
+	.b_menu_link{
+		display: block;
+		width: 100%;
+		padding:10px;
+		color: #000;	
+		text-decoration: none;
+		border-top: 1px solid rgba(0,0,0,0.3);
+		background-color: rgba(228, 223, 223, 0.95);
+		font-size: 18px;
+   	font-weight: 300; 
+	}
+
+	#check-menu:checked ~ .b_main_menu{
+		max-height: 500px;
+		font-size: 16px;
+	}
+	#check-menu:checked~ .first{
+		display: none;
+	}
+	#check-menu:checked~ .second{
+		transform: rotate(45deg);
+	}
+	#check-menu:checked~ .third{
+		transform: rotate(-45deg);
+	}
+	#check-menu:checked~ .fourth{
+		display: none;
+	}
+  }*/
+ 
+/*-------логотип+замовити-------*/
+.logotype__container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.name_and_button{
+/*	border: 1px solid #000;*/
+	width: 450px;
+	padding:3px; 
+	margin: 180px 0px;
+}
+.baker_name{
+	/*border: 1px solid #ff0000;*/
+}
+.baker_name h1{
+	font-family: "Kaisei+HarunoUmi";
+	font-size: 50px;
+	font-weight: 400;
+	display: flex;
+	justify-content: center;
+}
+.text_bottom{
+	/*border: 1px solid #00ffff;*/
+	display: flex;
+	justify-content: center;
+
+}
+.text_bottom h3{
+	font-family: "Kaisei+Decol";
+	font-size: 20px;
+	font-weight: 700;
+	padding-top: 16px;
+}
+.name_and_button button,img{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.name_and_button button{
+	border: 1px solid #000;
+	border-radius: 5px;
+	height: 80px;
+	width: 320px;
+	cursor: pointer;
+	background-color: #D9D9D9;
+	margin: 0px 3px;
+	margin-top: 70px;
+}
+
+.name_and_button button{
+	font-family: "Montserrat";
+	font-weight: 300;
+	font-size: 32px;
+}
+.name_and_button img{
+	/*border: 1px solid #000;*/
+	margin-left: 15px;
+}
+.button_border{
+	display: flex;
+	justify-content: center;
+}
+@media only screen and (max-width: 1150px){
+	.header{
+		background-position: center center;
+	}
+
+}
+@media only screen and (max-width: 760px){
+	.name_and_button{ 
+		margin: 90px 0px;
+	}
+
+}
+@media only screen and (max-width: 658px){
+	.name_and_button{
+		width: 380px;
+		margin: 90px 0px;
+	}
+	.baker_name h1{
+		font-size: 46px;
+	}
+	.text_bottom h3{
+		font-size: 16px;
+	}
+	.name_and_button img{
+		height:60px ;
+		width: 90px;
+	}
+	.name_and_button button{
+		height: 65px;
+		width: 260px;
+		margin-top: 50px;
+		font-size: 26px;
+	}
+	.button_border img{
+		height: 48px;
+		width: 56px;
+	}
+}
+@media only screen and (max-width: 390px){
+	.name_and_button{
+		width: 330px;
+		margin-top: 250px;
+		margin-bottom: 150px;
+	}
+	.baker_name h1{
+		font-size: 36px;
+	}
+	.text_bottom h3{
+		font-size: 12px;
+	}
+	.name_and_button img{
+		height:40px ;
+		width: 60px;
+	}
+	.name_and_button button{
+		height: 50px;
+		width: 200px;
+		margin-top: 30px;
+		font-size: 20px;
+	}
+	.button_border img{
+		height: 30px;
+		width: 35px;
+	}
+}
+/*----------АДАПТАЦІЯ ШАПКИ--------------------------------------------------------------------------------------------*/
+
+/*@media only screen and (max-width: 1300px){
+	.menu{
+	margin: 0px 0px 0px 45px;
+}
+	.menu_icon{
+	margin: 0px 0px 0px 190px;
+}
+
+}
+@media only screen and (max-width: 1253px){
+	.menu{
+	margin: 0px 0px 0px 40px;
+}
+	.menu_icon{
+	margin: 0px 0px 0px 160px;
+}
+}
+
+@media only screen and (max-width: 1218px){
+	.menu{
+	margin: 0px 0px 0px 30px;
+}
+	.menu_icon{
+	margin: 0px 0px 0px 110px;
+}
+}
+
+/*@media only screen and (max-width: 1183px){
+	.menu{
+	margin: 0px 0px 0px 35px;
+}
+	.menu_icon{
+	margin: 0px 0px 0px 130px;
+}
+}*/
+
+/*----------MAIN ПРО НАС--------------------------------------------------------------------------------------------*/
+.about_logo{
+	/*border: 1px solid #000;*/
+	display: flex;
+	justify-content: center;
+	margin-top: 80px;
+}
+.img_logotyp{
+	/*border: 1px solid #ff0000;*/
+	width:330px;
+	height:95px;
+	margin:0px  2px;
+
+	background-image: url("img/logotyp.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.about_text{
+	/*border: 1px solid #000;*/
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 80px;
+	padding: 5px;
+}
+.about_text p{
+	font-size: 20px;
+	font-weight: 400;
+}
+.about_photo{
+	padding: 0px 2px;
+	/*border: 1px solid #00ff00;*/
+	display: flex;
+	/*min-height: 100px;*/
+	align-items: center;
+	justify-content: space-between;
+	margin:20px 0px;
+}
+.img_about_1{
+	/*border: 1px solid #ff0000;*/
+	width:400px;
+	height:360px;
+	margin:0px 10px; 
+
+	background-image: url("img/about1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.img_about_2{
+	/*border: 1px solid #ff0000;*/
+	width:400px;
+	height:360px;
+	margin:0px 10px; 
+
+	background-image: url("img/about2.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.img_about_3{
+	/*border: 1px solid #ff0000;*/
+	width:400px;
+	height:360px;
+	margin:0px 10px; 
+
+	background-image: url("img/about3.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+/*.about_photo img{
+	margin:0px 15px; 
+}*/
+@media only screen and (max-width: 1350px){
+	._container{
+		max-width: 1200px;
+	}
+}
+@media only screen and (max-width: 1240px){
+	._container{
+		max-width: 1100px;
+	}
+}
+@media only screen and (max-width: 1140px){
+	._container{
+		max-width: 1000px;
+	}
+	.img_about_1{
+		width:370px;
+		height:333px;
+	}
+	.img_about_2{
+		width:370px;
+		height:333px;
+	}
+	.img_about_3{
+		width:370px;
+		height:333px;
+	}
+}
+@media only screen and (max-width: 1040px){
+	._container{
+		max-width: 900px;
+	}
+	.about_logo{
+		margin-top: 70px;
+	}
+	.img_logotyp{
+		width:278px;
+		height:80px;
+	}
+	.img_about_1{
+		width:320px;
+		height:288px;
+	}
+	.img_about_2{
+		width:320px;
+		height:288px;
+	}
+	.img_about_3{
+		width:320px;
+		height:288px;
+	}
+	.about_text p{
+		font-size: 18px;
+	}
+	.about_text{
+		margin-bottom: 70px;
+	}
+}
+@media only screen and (max-width: 940px){
+	._container{
+		max-width: 800px;
+	}
+	.about_logo{
+		margin-top: 60px;
+	}
+	.about_photo{
+		margin:15px 0px;
+	}
+	.img_logotyp{
+		width:243px;
+		height:70px;
+	}
+	.img_about_1{
+		width:290px;
+		height:261px;
+	}
+	.img_about_2{
+		width:290px;
+		height:261px;
+	}
+	.img_about_3{
+		width:290px;
+		height:261px;
+	}
+	.about_text{
+		margin-bottom: 60px;
+	}
+}
+@media only screen and (max-width: 820px){
+	._container{
+		max-width: 700px;
+	}
+	.about_logo{
+		margin-top: 50px;
+	}
+	.about_photo{
+		margin:15px 0px;
+	}
+	.img_logotyp{
+		width:209px;
+		height:60px;
+	}
+	.img_about_1{
+		width:270px;
+		height:243px;
+	}
+	.img_about_2{
+		width:270px;
+		height:243px;
+	}
+	.img_about_3{
+		width:270px;
+		height:243px;
+	}
+	.about_text p{
+		font-size: 15px;
+	}
+	.about_text{
+		margin-bottom: 50px;
+	}
+}
+@media only screen and (max-width: 720px){
+	._container{
+		max-width: 600px;
+	}
+	.about_logo{
+		margin-top: 60px;
+	}
+	.img_logotyp{
+		width:385px;
+		height:95px;
+		margin:0px  2px;
+	}
+	.about_photo{
+		margin:0px;
+		padding: 0px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+	}
+	.img_about_1{
+		width:600px;
+		height:300px;
+		margin:5px; 
+	}
+	.img_about_2{
+		width:600px;
+		height:300px;
+		margin:5px;
+	}
+	.img_about_3{
+		width:600px;
+		height:300px;
+		margin:5px;
+	}
+	.about_text{
+		margin: 5px 0px 60px 0px;
+		padding: 2px;
+	}
+	.about_text p{
+		font-size: 18px;
+	}
+}
+@media only screen and (max-width: 620px){
+	._container{
+		max-width: 500px;
+	}
+}
+@media only screen and (max-width: 520px){
+	._container{
+		max-width: 450px;
+	}
+}
+@media only screen and (max-width: 470px){
+	._container{
+		max-width: 420px;
+	}
+	.img_logotyp{
+		width:285px;
+		height:70px;
+	}
+	.about_text p{
+		font-size: 16px;
+	}
+
+}
+@media only screen and (max-width: 430px){
+	._container{
+		max-width: 390px;
+	}
+}
+@media only screen and (max-width: 390px){
+	._container{
+		margin: 0px 5px;
+		max-width: 370px;
+	}
+}
+@media only screen and (max-width: 370px){
+	._container{
+		margin: 0px 5px;
+		max-width: 350px;
+	}
+}
+@media only screen and (max-width: 350px){
+	._container{
+		margin: 0px 5px;
+		max-width: 320px;
+	}
+	.about_logo{
+		margin-top:50px;
+	}
+	.img_logotyp{
+		width:245px;
+		height:60px;
+	}
+	.img_about_1{
+		width:290px;
+		height:200px;
+		margin:5px; 
+	}
+	.img_about_2{
+		width:290px;
+		height:200px;
+		margin:5px;
+	}
+	.img_about_3{
+		width:290px;
+		height:200px;
+		margin:5px;
+	}
+	.about_text{
+		margin: 5px 0px 50px 0px;
+		padding: 2px;
+	}
+	.about_text p{
+		font-size: 14px;
+	}
+}
+@media only screen and (max-width: 330px){
+	.img_about_1{
+		width:290px;
+		height:160px;
+		margin:5px; 
+	}
+	.img_about_2{
+		width:290px;
+		height:160px;
+		margin:5px;
+	}
+	.img_about_3{
+		width:290px;
+		height:160px;
+		margin:5px;
+	}
+}
+
+
+
+
+
+
+
+/*----------MAIN НАША ПРОДУКЦІЯ------------------------------------------------------------------------------------------------------------------------------*/
+.our__container{
+	/*border: 5px solid #ff0000;*/
+}
+.our{
+	/*border: 1px solid #ff0000;*/
+	display: flex;
+	justify-content: center;
+
+}
+.products_title{
+	/*border: 1px solid #000;*/
+	margin-bottom: 70px;
+	margin-top: 40px;
+}
+.products_title h2{
+	font-weight: 400;
+	font-size: 36px;
+}
+.products_menu{
+	/*border: 2px solid #000;*/
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 80px;
+}
+.products_card{
+	border: 1px solid #000;
+	padding:14px 10px 55px 10px;
+	width:350px ;
+	height:400px ;
+	/*margin: 10px 38px;*/
+	margin: 10px 8px;
+} 
+
+.img_all_cookies{
+	/*border: 1px solid #0000ff;*/
+	width:330px;
+	height:219px;
+	margin-bottom: 20px; 
+
+	background-image: url("img/all_cookies.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.img_bakery{
+	/*border: 1px solid #0000ff;*/
+	width:330px;
+	height:219px;
+	margin-bottom: 20px; 
+
+	background-image: url("img/bakery.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.img_cakes_and_cupcakes{
+	/*border: 1px solid #0000ff;*/
+	width:330px;
+	height:219px;
+	margin-bottom: 20px; 
+
+	background-image: url("img/cakes&cupcakes.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.products_card img{
+	/*border: 1px solid #000;*/
+}
+/*.bakery_text h3,p,a,img{
+	display: flex;
+	justify-content: center;
+}*/
+.bakery_text h3,p,a,img{
+	display: flex;
+	justify-content: center;
+}
+.bakery_text h3{
+	/*border: 1px solid #ff00ff;*/
+	font-weight: 200;
+	font-size: 32px;
+	margin-bottom: 17px;
+}
+.bakery_text p{
+	/*border: 1px solid #ff0000;*/
+	font-weight: 200;
+	font-size: 15px;
+	text-align: center;
+	margin: 0px 43px;
+}
+.bakery_text a{
+	/*border: 1px solid #00ff00;*/
+	padding-top: 25px;
+}
+@media only screen and (max-width: 1141px){
+	.products_card{
+		padding:14px 8px 40px 8px;
+		width:300px ;
+		height:350px ;
+	} 
+	.img_all_cookies{
+		width:280px;
+		height:191px;
+	}
+	.img_bakery{
+		width:280px;
+		height:191px;
+	}
+	.img_cakes_and_cupcakes{
+		width:280px;
+		height:191px;
+	}
+	.bakery_text p{
+		/*font-size: 15px;*/
+		margin: 0px 23px;
+	}
+	.bakery_text a{
+		padding-top: 12px;
+	}
+}
+@media only screen and (max-width: 1041px){
+	.products_title{
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+	.products_card{
+		/*padding:14px 8px 40px 8px;*/
+		width:270px ;
+		height:315px ;
+	} 
+	.img_all_cookies{
+		width:250px;
+		height:170px;
+		margin-bottom: 15px; 
+	}
+	.img_bakery{
+		width:250px;
+		height:170px;
+		margin-bottom: 15px; 
+	}
+	.img_cakes_and_cupcakes{
+		width:250px;
+		height:170px;
+		margin-bottom: 15px; 
+	}
+	.bakery_text h3{
+		font-size: 27px;
+		margin-bottom: 14px;
+	}
+	.bakery_text p{
+		font-size: 12px;
+		margin: 0px 38px;
+	}
+	.bakery_text a{
+	padding-top: 15px;
+	}
+}
+@media only screen and (max-width: 941px){
+	.products_title{
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+	.products_menu{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin-bottom: 60px;
+	}
+	.products_card{
+		padding:6px;
+		width:750px ;
+		height:286px ;
+		display: flex;
+		justify-content: space-between;
+	} 
+	.bakery_text{
+		/*border: 1px solid #8000ff;*/
+		width: 340px;
+		margin: 6px 0px;
+	}
+	.img_all_cookies{
+		width:388px;
+		height:270px;
+		margin-right: 6px;
+		margin-bottom: 0px; 
+	}
+	.img_bakery{
+		width:388px;
+		height:270px;
+		margin-right: 6px;
+		margin-bottom: 0px; 
+	}
+	.img_cakes_and_cupcakes{
+		width:388px;
+		height:270px;
+		margin-right: 6px;
+		margin-bottom: 0px; 
+	}
+	.bakery_text h3,p,a,img{
+		display: flex;
+		justify-content: center;
+	}
+	.bakery_text h3{
+		text-align: center;
+		font-size: 40px;
+		margin-top: 45px;
+		margin-bottom: 17px;
+	}
+	.bakery_text p{
+		font-size: 17px;
+		text-align: center;
+		margin: 0px 43px;
+	}
+	.bakery_text a{
+		padding-top: 25px;
+	}
+}
+@media only screen and (max-width: 821px){
+	.products_menu{
+		margin-bottom: 40px;
+	}
+	.products_card{
+		width:690px ;
+		height:263px ;
+	} 
+	.bakery_text{
+		width: 300px;
+	}
+	.img_all_cookies{
+		width:359px;
+		height:250px;
+	}
+	.img_bakery{
+		width:359px;
+		height:250px;
+	}
+	.img_cakes_and_cupcakes{
+		width:359px;
+		height:250px;
+	}
+	.bakery_text h3{
+		margin-top: 30px;
+	}
+}
+@media only screen and (max-width: 721px){
+	.products_menu{
+		display: flex;
+		justify-content: center;
+		margin-bottom: 80px;
+	}
+	.products_card{
+		border: 1px solid #000;
+		padding:14px 10px 0px 10px;
+		width:580px ;
+		height:450px ;
+		margin: 10px 8px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	} 
+
+	.img_all_cookies{
+		width:560px;
+		height:250px;
+		margin:0px; 
+	}
+	.img_bakery{
+		width:560px;
+		height:250px;
+		margin:0px; 
+	}
+	.img_cakes_and_cupcakes{
+		width:560px;
+		height:250px;
+		margin:0px; 
+	}
+
+	.products_card img{
+		/*border: 1px solid #000;*/
+	}
+	.bakery_text{
+		width: 400px;
+		margin:0px;
+	}
+	.bakery_text h3,p,a,img{
+		display: flex;
+		justify-content: center;
+	}
+	.bakery_text h3{
+		font-weight: 200;
+		font-size: 35px;
+		margin-bottom: 17px;
+	}
+	.bakery_text p{
+		font-weight: 200;
+		font-size: 18px;
+		text-align: center;
+		margin: 0px 43px;
+	}
+	.bakery_text a{
+		padding-top: 25px;
+	}
+}
+@media only screen and (max-width: 622px){
+	.products_card{
+		padding:14px 10px 0px 10px;
+		width:480px ;
+		height:450px ;
+		margin: 10px 8px;
+	} 
+	.img_all_cookies{
+		width:480px;
+		height:240px;
+		margin:0px; 
+	}
+	.img_bakery{
+		width:480px;
+		height:240px;
+		margin:0px; 
+	}
+	.img_cakes_and_cupcakes{
+		width:480px;
+		height:240px;
+		margin:0px; 
+	}
+
+}
+@media only screen and (max-width: 521px){
+	.products_card{
+		width:400px ;
+		height:455px ;
+	}
+}
+@media only screen and (max-width: 431px){
+	.products_card{
+		width:380px ;
+		height:455px ;
+	}
+}
+@media only screen and (max-width: 402px){
+	.products_card{
+		width:370px ;
+		height:450px ;
+	}
+}
+@media only screen and (max-width: 394px){
+	.products_title{
+		margin-top: 30px;
+		margin-bottom: 20px;
+	}
+	.products_title h2{
+		font-weight: 400;
+		font-size: 30px;
+	}
+	.products_menu{
+		margin-bottom: 50px;
+	}
+	.products_card{
+		width:360px ;
+		height:400px ;
+	}
+	.img_all_cookies{
+		width:340px;
+		height:180px;
+		margin:0px; 
+	}
+	.img_bakery{
+		width:340px;
+		height:180px;
+		margin:0px; 
+	}
+	.img_cakes_and_cupcakes{
+		width:340px;
+		height:180px;
+		margin:0px; 
+	}
+	.bakery_text{
+		width: 340px;
+		margin:0px;
+		margin: 10px 0px;
+	}
+	.bakery_text h3{
+		font-weight: 200;
+		font-size: 35px;
+		margin-top: 0px;
+		margin-bottom: 10px;
+	}
+	.bakery_text p{
+		font-weight: 200;
+		font-size: 18px;
+		text-align: center;
+		margin: 0px 43px;
+	}
+	.bakery_text a{
+		padding-top: 15px;
+	}
+}
+@media only screen and (max-width: 388px){
+	.products_title h2{
+		font-size: 28px;
+	}
+	.products_card{
+		width:320px ;
+		height:370px ;
+	}
+	.img_all_cookies{
+		width:300px;
+		height:180px;
+		margin:0px; 
+	}
+	.img_bakery{
+		width:300px;
+		height:180px;
+		margin:0px; 
+	}
+	.img_cakes_and_cupcakes{
+		width:300px;
+		height:180px;
+		margin:0px; 
+	}
+	.bakery_text h3{
+		font-size: 30px;
+	}
+	.bakery_text p{
+		font-size: 16px;
+	}
+}
+@media only screen and (max-width: 368px){
+	.products_card{
+		width:300px ;
+		height:360px ;
+	}
+	.img_all_cookies{
+		width:280px;
+		height:170px;
+		margin:0px; 
+	}
+	.img_bakery{
+		width:280px;
+		height:170px;
+		margin:0px; 
+	}
+	.img_cakes_and_cupcakes{
+		width:280px;
+		height:170px;
+		margin:0px; 
+	}
+}
+@media only screen and (max-width: 368px){
+	.products_title h2{
+		font-weight: 400;
+		font-size: 20px;
+	}
+	.products_card{
+		width:290px ;
+		height:340px ;
+	}
+	.img_all_cookies{
+		width:270px;
+		height:170px;
+		margin:0px; 
+	}
+	.img_bakery{
+		width:270px;
+		height:170px;
+		margin:0px; 
+	}
+	.img_cakes_and_cupcakes{
+		width:270px;
+		height:170px;
+		margin:0px; 
+	}
+	.bakery_text h3{
+		font-size: 25px;
+	}
+	.bakery_text p{
+		font-size: 14px;
+	}
+}
+
+
+/*--------MAIN КОНТАКТИ--------------------------------------------------------------------------------------------------------------------------------*/
+.contact_info{
+/*	border: 1px solid #000;*/
+	display: flex;
+	justify-content: space-between;
+	margin-top: 75px;
+	margin-bottom: 80px;
+	
+}
+.contact_and_logo{
+/*	border: 1px solid #ff0000;*/
+	display: flex;
+	flex-wrap: wrap;
+	width: 450px;
+	height: 290px;
+	margin-top: 8px;
+}
+.logotype{
+/*	border: 1px solid #00ff00;*/
+	width: 316px;
+	height: 82px;
+	margin-left:132px;
+}
+.logotype img{
+	width: 314px;
+	height: 80px;
+
+}
+.information{
+/*	border: 1px solid #ff0066;*/
+	display: flex;
+	flex-wrap: wrap;
+	justify-content:flex-start;
+	width: 400px;
+	height: 150px;
+	margin:0px; 
+}
+.contact_line{
+/*	border: 1px solid #000;*/
+	height: 34px;
+	width: 400px;
+	display: flex;
+	align-items: center;
+}
+.contact_line img{
+	line-height: 25px;
+}
+.contact_line:not(:last-child){
+	margin-bottom: 22px;
+}
+.contact_line p{
+	font-family:Cabin;
+	font-weight: 400; 
+	font-size: 20px;
+}
+.contact_icon{
+	margin-right: 15px;
+	margin-left: 3px;
+}
+.contact_text{
+	margin-right: 5px;
+}
+.maps_geolocation{
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: 10px;
+}
+
+.img_maps{
+/*	border: 1px solid #ff0000;*/
+	width:640px;
+	height:400px;
+	border: 1px solid #000;
+	border-radius: 5px;
+
+	background-image: url("img/maps.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+@media only screen and (max-width: 1239px){
+	.logotype{
+		margin-left:100px;
+	}
+}
+@media only screen and (max-width: 1142px){
+	.logotype{
+		margin-left:50px;
+	}
+	.img_maps{
+		width:500px;
+		height:333px;
+	}
+}
+@media only screen and (max-width: 1039px){
+	.contact_info{
+		margin-top: 65px;
+		margin-bottom: 70px;	
+	}
+	.logotype{
+	width: 276px;
+	height: 72px;
+	}
+	.logotype img{
+		width: 274px;
+		height: 70px;
+	}
+	.img_maps{
+		width:400px;
+		height:266px;
+	}
+	.information{
+		width: 300px;
+		height: 112px;
+	}
+	.contact_line{
+		height: 25px;
+		width: 300px;
+	}
+	.contact_line:not(:last-child){
+		margin-bottom: 18px;
+	}
+	.contact_line p{
+		font-size: 17px;
+	}
+	
+}
+@media only screen and (max-width: 819px){
+	.contact_info{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;	
+	}
+	.contact_and_logo{
+		display: flex;
+		flex-direction: row;
+		justify-content:space-around;
+		
+		width: 660px;
+		height: 110px;
+		margin-top: 0px;
+	}
+	.logotype{
+		width: 276px;
+		height: 72px;
+		margin-left:0px;
+	}
+	.logotype img{
+		width: 274px;
+		height: 70px;
+	}
+	.information{
+		display: flex;
+		width: 280px;
+		height: 85px;
+		margin:0px; 
+	}
+	.contact_line{
+		height: 25px;
+		width:280px;
+		display: flex;
+		align-items: center;
+	}
+	.contact_line img{
+		line-height: 20px;
+	}
+	.contact_line:not(:last-child){
+		margin-bottom: 5px;
+	}
+	.contact_line p{
+		font-family:Cabin;
+		font-weight: 400; 
+		font-size: 15px;
+	}
+	.contact_icon{
+		margin-right: 15px;
+		margin-left: 3px;
+	}
+	.contact_text{
+		margin-right: 5px;
+	}
+	.maps_geolocation{
+		display: flex;
+		flex-wrap: wrap;
+		margin-left:0px;
+	}
+
+	.img_maps{
+		width:660px;
+		height:250px;
+	}
+}
+@media only screen and (max-width: 721px){
+	.img_maps{
+		width:600px;
+		height:250px;
+	}
+}
+@media only screen and (max-width: 621px){
+	.contact_and_logo{
+		/*border: 1px solid #ff0000;*/
+		display: flex;
+		flex-direction: row;
+		justify-content:space-around;
+		
+		width: 660px;
+		height: 180px;
+		margin-top: 0px;
+	}
+	.img_maps{
+		width:500px;
+		height:250px;
+	}
+}
+@media only screen and (max-width: 519px){
+	.logotype{
+		width: 236px;
+		height: 62px;
+		margin-left:0px;
+	}
+	.logotype img{
+		width: 234px;
+		height: 60px;
+
+	}
+	.contact_and_logo{
+		justify-content:center;
+		
+		width: 660px;
+		height: 180px;
+		margin-top: 0px;
+	}
+	.img_maps{
+		width:445px;
+		height:180px;
+	}
+}
+@media only screen and (max-width: 469px){
+	.img_maps{
+		width:405px;
+		height:180px;
+	}
+}
+@media only screen and (max-width: 429px){
+	.img_maps{
+		width:355px;
+		height:180px;
+	}
+}
+@media only screen and (max-width: 362px){
+	.img_maps{
+		width:340px;
+		height:150px;
+	}
+	.contact_line p{
+		font-size: 13px;
+	}
+	.contact_info{
+		margin:50px 0px;
+		
+	}
+}
+@media only screen and (max-width: 351px){
+	.img_maps{
+		width:310px;
+		height:150px;
+	}
+	.contact_line p{
+		font-size: 13px;
+	}
+	.contact_info{
+		margin:50px 0px;
+		
+	}
+}
+@media only screen and (max-width: 322px){
+	.img_maps{
+		width:305px;
+		height:150px;
+	}
+	.contact_line p{
+		font-size: 13px;
+	}
+	.contact_info{
+		margin:50px 0px;
+		
+	}
+}
+/*--------MAIN МЕНЮ ПРОДУКЦІЇ--------------------------------------------------------------------------------------------------*/
+.products {
+	/*border: 1px solid #000;*/
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-right: 0;
+	padding: 0px;
+}
+.cookies {
+	/*border: 1px solid #ff0000;*/
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 70px 0px 20px 0px;
+	
+}
+.bakery {
+	/*border: 1px solid #ff0000;*/
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 0px 0px 20px 0px;
+}
+.cake {
+	/*border: 1px solid #ff0000;*/
+	justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0px 0px 39px 0px;
+}
+
+.card {
+	background-color: #fff;
+	/*border: 1px solid #000;*/
+	padding:14px 10px 55px 10px;
+	width:240px ;
+	height:280px ;
+	margin: 10px 6px;
+}
+.card img {
+	margin: 0px 0px 15px 0px;
+}
+.card_text h4,p{
+	display: flex;
+	justify-content:center;
+}
+.card h4,p{
+	font-weight: 300;
+}
+.button_products{
+	display: flex;
+	justify-content:center;
+	margin-bottom: 36px;
+	
+	
+}
+.button_menu{
+	border: 1px solid #000;
+	background-color: rgba(228, 223, 223, 0.95);
+	width: 180px;
+	height: 33px ;
+	border-radius: 5px;
+	border-color: rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+}
+.button_menu p{
+	/*font-size: 15px;*/
+	font-family:Montserrat;
+	font-weight: 200;
+}
+@media only screen and (max-width: 392px){
+	.cookies {
+		margin: 50px 0px 10px 0px;
+	}
+	.bakery {
+		margin: 0px 0px 10px 0px;
+	}
+	.cake {
+		margin: 0px 0px 29px 0px;
+	}
+}
+
+
+
+/*-------MAIN ЗАМОВИТИ ДЕСЕРТ/ВИПІЧКУ------------------------------------------------------------------------------------------------------------*/
+.order_h{
+	/*border: 1px solid #000;*/
+	margin: 80px 2px 5px 2px;
+}
+.order_h h2{
+	font-size: 30px;
+	font-weight: 400;
+}
+.to_order{
+	/*border: 1px solid #ff0000;*/
+	display: flex;
+	justify-content: space-between;
+	margin: 0px 2px 80px 2px;
+}
+
+.ord_words{
+	/*border: 1px solid #000;*/
+	display: flex;
+	width: 475px;
+	height: 96px;
+	font-size: 22px;
+	margin: 80px 20px 80px 0px;
+}
+.ord_forma{
+	/*border: 1px solid #00ff00;*/
+	display: flex;
+	margin:10px 2px 0px 2px;
+}
+.ord_input{
+	/*border: 1px solid #0000ff;*/
+}
+
+/*.ord_input button{
+	font-weight: 200;
+	font-size: 20px;
+	border: 1px solid rgba(0, 0, 0, 0.5);
+	border-radius: 5px;
+	height: 60px;
+	width: 323px;
+	cursor: pointer;
+}*/
+
+.button input{
+	font-weight: 200;
+	font-size: 20px;
+	border: 1px solid rgba(0, 0, 0, 0.5);
+	border-radius: 5px;
+	height: 60px;
+	width: 323px;
+	cursor: pointer;
+}
+
+.button input:hover {
+    background-color:#d3eaf2;
+}
+.input_line input{
+	border: 1px solid rgba(0, 0, 0, 0.5);
+	border-radius: 5px;
+	height: 60px;
+	width: 323px;
+	font-family:"M+PLUS+1";
+	font-size: 20px;
+	font-weight: 100;
+	opacity: 0.4;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+.img_order{
+	/*border: 1px solid #ff0;*/ 
+	width:337px;
+	height:270px;
+	margin-left: 15px;
+
+	background-image: url("img/order.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+@media only screen and (max-width: 1145px){
+	.ord_forma{
+		height: 230px;
+	}
+	.ord_input{
+		height: 230px;
+	}
+	.ord_words{
+		width: 350px;
+		height: 120px;
+		font-size: 20px;
+		margin: 70px 20px 70px 0px;
+	}
+	.button input{
+		/*font-size: 20px;*/
+		height: 52px;
+		width: 280px;
+	}
+	.input_line input{
+		height: 52px;
+		width: 280px;
+		font-size: 18px;
+		padding: 5px;
+		margin-bottom: 5px;
+	}
+	.img_order{
+		width:280px;
+		height:224px;
+		margin-left: 5px;
+	}
+}
+@media only screen and (max-width: 1035px){
+	.order_h{
+		margin: 70px 2px 5px 2px;
+	}
+	.to_order{
+		margin: 0px 2px 70px 2px;
+	}
+	.ord_words{
+		width: 250px;
+		height: 140px;
+		font-size: 20px;
+	}
+}
+@media only screen and (max-width: 822px){
+	.order_h{
+		margin: 60px 2px 0px 0px;
+	}
+	.to_order{
+		display: flex;
+		flex-wrap: wrap;
+		height: 350px;
+		margin: 10px 0px 60px 0px;
+	}
+	.ord_words{
+		width: 700px;
+		height: 60px;
+		font-size: 20px;
+		margin:0px;
+	}
+	.ord_forma{
+		display: flex;
+		height: 283px;
+		margin:10px 0px 0px 0px;
+	}
+	.ord_input{
+		height: 283px;
+		margin: 0px;
+	}
+	.button input{
+		height:66px;
+		width: 360px;
+	}
+	.input_line input{
+		height: 66px;
+		width: 360px;
+		padding: 5px;
+		margin-bottom: 5px;
+	}
+	.img_order{
+		width:310px;
+		height:280px;
+		margin-left: 20px;
+	}
+
+}
+@media only screen and (max-width: 719px){
+	.order_h{
+		margin: 60px 2px 0px 0px;
+	}
+	.to_order{
+		display: flex;
+		flex-wrap: wrap;
+		height: 670px;
+		margin-bottom: 60px;
+	}
+	.ord_words{
+		height: 50px;
+		font-size: 18px;
+	}
+	.ord_forma{
+		/*border: 1px solid #00ff00;*/
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		height: 580px;
+		margin:10px 0px 0px 0px;
+	}
+	.button input{
+		height:66px;
+		width: 590px;
+	}
+	.input_line input{
+		height: 66px;
+		width: 590px;
+		padding: 5px;
+		margin-bottom: 5px;
+	}
+	.img_order{
+		width:590px;
+		height:280px;
+		margin:10px 0px;
+	}
+}
+@media only screen and (max-width: 619px){
+	.ord_words{
+		height: 60px;
+		font-size: 18px;
+	}
+	.button input{
+		height:66px;
+		width: 490px;
+		font-size: 23px;
+	}
+	.input_line input{
+		height: 66px;
+		width: 490px;
+		font-size: 23px;
+		padding: 5px;
+		margin-bottom: 5px;
+	}
+	.img_order{
+		width:490px;
+		height:280px;
+		margin:10px 0px;
+	}
+}
+@media only screen and (max-width: 518px){
+	.order_h h2{
+		font-size: 30px;
+	}
+	.ord_words{
+		height: 70px;
+		font-size: 20px;
+	}
+	.button input{
+		height:66px;
+		width: 445px;
+		font-size: 23px;
+	}
+	.input_line input{
+		height: 66px;
+		width: 445px;
+		font-size: 23px;
+		padding: 5px;
+		margin-bottom: 5px;
+	}
+	.img_order{
+		width:445px;
+		height:280px;
+		margin:10px 0px;
+	}
+}
+@media only screen and (max-width: 468px){
+	.button input{
+		height:66px;
+		width: 415px;
+		font-size: 23px;
+	}
+	.input_line input{
+		height: 66px;
+		width: 415px;
+		font-size: 23px;
+		padding: 5px;
+		margin-bottom: 5px;
+	}
+	.img_order{
+		width:415px;
+		height:280px;
+		margin:10px 0px;
+	}
+}
+@media only screen and (max-width: 440px){
+	.button input{
+		height:66px;
+		width: 400px;
+		font-size: 23px;
+	}
+	.input_line input{
+		height: 66px;
+		width: 400px;
+		font-size: 23px;
+		padding: 5px;
+		margin-bottom: 5px;
+	}
+	.img_order{
+		width:400px;
+		height:280px;
+		margin:10px 0px;
+	}
+}
+@media only screen and (max-width: 429px){
+	.ord_words{
+		height: 80px;
+		font-size: 20px;
+	}
+	.button input{
+		height:66px;
+		width: 385px;
+		font-size: 23px;
+	}
+	.input_line input{
+		height: 66px;
+		width: 385px;
+		font-size: 23px;
+		padding: 5px;
+		margin-bottom: 5px;
+	}
+	.img_order{
+		width:385px;
+		height:280px;
+		margin:10px 0px;
+	}
+}
+@media only screen and (max-width: 409px){
+	.button input{
+		height:66px;
+		width: 370px;
+		font-size: 23px;
+	}
+	.input_line input{
+		height: 66px;
+		width: 370px;
+		font-size: 23px;
+		padding: 5px;
+		margin-bottom: 5px;
+	}
+	.img_order{
+		width:370px;
+		height:280px;
+		margin:10px 0px;
+	}
+}
+@media only screen and (max-width: 393px){
+	.button input{
+		height:66px;
+		width: 360px;
+		font-size: 23px;
+	}
+	.input_line input{
+		height: 66px;
+		width: 360px;
+		font-size: 23px;
+		padding: 5px;
+		margin-bottom: 5px;
+	}
+	.img_order{
+		width:360px;
+		height:280px;
+		margin:10px 0px;
+	}
+}
+@media only screen and (max-width: 387px){
+	.order_h h2{
+		font-size: 22px;
+	}
+	.button input{
+		height:66px;
+		width: 340px;
+		font-size: 23px;
+	}
+	.input_line input{
+		height: 66px;
+		width: 340px;
+		font-size: 23px;
+		padding: 5px;
+		margin-bottom: 5px;
+	}
+	.img_order{
+		width:340px;
+		height:280px;
+		margin:10px 0px;
+	}
+}
+@media only screen and (max-width: 371px){
+	.ord_words{
+		height: 80px;
+		font-size: 17px;
+	}
+	.button input{
+		height:66px;
+		width: 300px;
+		font-size: 23px;
+	}
+	.input_line input{
+		height: 66px;
+		width: 300px;
+		font-size: 23px;
+		padding: 5px;
+		margin-bottom: 5px;
+	}
+	.img_order{
+		width:300px;
+		height:280px;
+		margin:10px 0px;
+	}
+}
+@media only screen and (max-width: 333px){
+	.order_h h2{
+		font-size: 18px;
+	}
+	.to_order{
+		height: 540px;
+		margin-bottom: 50px;
+	}
+	.ord_words{
+		height: 60px;
+		font-size: 15px;
+	}
+	.ord_forma{
+		height: 463px;
+		margin:10px 0px 0px 0px;
+	}
+	.ord_input{
+		height: 205px;
+	}
+	.button input{
+		height:46px;
+		width: 285px;
+		font-size: 19px;
+	}
+	.input_line input{
+		height: 46px;
+		width: 285px;
+		font-size: 16px;
+		padding: 5px;
+		margin-bottom: 5px;
+	}
+	.img_order{
+		width:285px;
+		height:240px;
+		margin:5px 0px;
+	}
+}
+
+
+
+/*-------FOOTER--------------------------------------------------------------------------------------------------------------------*/
+.all_footer{
+	/*border: 1px solid #000;*/
+}
+.first_box{
+	/*border: 1px solid #ff0000;*/
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 0px 2px;
+	margin:100px 0px 0px 0px;
+}
+.box_text{
+	/*border: 1px solid #00ff00;*/	
+	height: 110px;
+	width: 340px;
+	margin: 0px 10px;
+}
+.ftr_text{
+	/*border: 1px solid #0000ff;*/
+	height: 26px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+.ftr_text p{
+	font-size: 18px;
+	line-height: 26px;
+	margin: 0px 2px;
+}
+.ftr_text a,p{
+	color: inherit;
+}
+.ftr_icon_and_text{
+	/*border: 1px solid #000;*/
+	height: 26px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+.ftr_icon_and_text img{
+	margin: 0px 2px;
+}
+.ftr_icon_and_text p{
+	margin: 0px 5px;
+	font-size: 18px;
+	line-height: 26px;
+}
+@media only screen and (max-width: 900px){
+	.ftr_icon_and_text p{
+		font-size: 15px;
+	}
+}
+
+.ftr_logotype{
+	/*border: 1px solid #000;*/
+	display: flex;
+	justify-content: center;
+	margin: 100px 0px;
+}
+.img_footer_logotyp{
+		/*border: 1px solid #0000ff;*/
+		width:400px;
+		height:100px;
+
+		background-image: url("img/footer_logotyp.png");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+}
+
+@media only screen and (max-width: 1039px){
+	.first_box{
+		margin-top: 80px;
+	}
+	.ftr_logotype{
+		margin: 80px 0px;
+	}
+}
+@media only screen and (max-width: 718px){
+	.first_box{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		padding: 0px 2px;
+		margin-top: 60px;
+	}
+	.ftr_logotype{
+		display: flex;
+		justify-content: center;
+		margin: 60px 0px;
+	}
+	.ftr_text p{
+		font-size: 20px;
+	}
+	.ftr_icon_and_text p{
+		font-size: 20px;
+	}
+}
+@media only screen and (max-width: 502px){
+	.img_footer_logotyp{
+		width:300px;
+		height:80px;
+	}
+}
+@media only screen and (max-width: 335px){
+	.box_text{
+		height: 110px;
+		width: 276px;
+		margin: 0px 5px;
+	}
+	.ftr_text{
+		height: 26px;
+		display: flex;
+		align-items: center;
+		margin-bottom: 10px;
+		width: 276px;
+	}
+	.ftr_text p{
+		font-size: 15px;
+		line-height: 26px;
+		margin: 0px 2px;
+	}
+	.ftr_text a,p{
+		color: inherit;
+	}
+	.ftr_icon_and_text{
+		height: 26px;
+		display: flex;
+		align-items: center;
+		margin-bottom: 10px;
+	}
+	.ftr_icon_and_text img{
+		margin: 0px 2px;
+	}
+	.ftr_icon_and_text p{
+		margin: 0px 5px;
+		font-size: 18px;
+		line-height: 26px;
+	}
+}
+@media only screen and (max-width: 328px){
+	.ftr_text{
+		display: flex;
+		justify-content: center;
+	}
+	.ftr_text p{
+		font-size: 14px;
+	}
+
+	.ftr_icon_and_text{
+		display: flex;
+		justify-content: center;
+
+	}
+	.ftr_icon_and_text img{
+		margin: 0px 2px;
+	}
+	.ftr_icon_and_text p{
+		margin: 0px 5px;
+		font-size: 14px;
+		line-height: 26px;
+	}
+	.ftr_logotype{
+		margin: 40px 0px;
+	}
+}
